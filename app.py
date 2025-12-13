@@ -73,10 +73,8 @@ def find_permutations(input_word, word_bank):
     """
     permutations = []
     input_word_lower = input_word.lower()
-    
-    for word in word_bank:
-        if are_anagrams(input_word_lower, word):
-            permutations.append(word)
+
+    permutations = [word for word in word_bank if are_anagrams(input_word_lower, word)]
     
     return sorted(permutations)
 

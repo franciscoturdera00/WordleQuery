@@ -15,6 +15,7 @@ docker run --rm -p 6767:6767 -v "$(pwd)":/app wordlequery:latest
 ```
 
 Notes:
+
 - The Flask app in this project listens on port `6767` (the container maps host port `6767`).
 - The `-v "$(pwd)":/app` mount keeps the container synced with your local files for development; omit it for an immutable production container.
 
