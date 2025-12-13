@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.build/
+dist/
+build/
+.eggs/
+*.egg-info/
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+
+# Editor files
+.vscode/
+.idea/
+.DS_Store
+
+# Tests and local files
+.pytest_cache/
+coverage.xml
+
+# Local env files and secrets
+.env
+
+# Postman collection (optional)
+postman_collection.json

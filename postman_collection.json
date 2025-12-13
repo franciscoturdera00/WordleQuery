@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "b1a7f2a0-6f1b-4f9a-9f1a-3c9f2b8b7f3e",
+    "name": "WordleQuery API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:6767",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Index",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"],
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query - valid (5 letters)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/query?word=alert",
+          "host": ["{{baseUrl}}"],
+          "path": ["query"],
+          "query": [
+            {
+              "key": "word",
+              "value": "alert"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query - valid (4 letters)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/query?word=care",
+          "host": ["{{baseUrl}}"],
+          "path": ["query"],
+          "query": [
+            {
+              "key": "word",
+              "value": "care"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query - missing param (expect 400)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/query",
+          "host": ["{{baseUrl}}"],
+          "path": ["query"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
